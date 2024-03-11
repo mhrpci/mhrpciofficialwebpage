@@ -52,11 +52,11 @@
                 <li><a href="mhrhci.html">MHRHCI</a></li>
                 <li><a href="verbena.html">VERBENA HOTEL</a></li>
                 <li><a href="cebic.html">CEBIC INDUSTRIES</a></li>
-                <li><a href="baygas.html">BAY GAS</a></li>
-                <li><a href="#">LUSCIOUS SPICES</a></li>
-                <li><a href="#">MAXIMUM HANDLING RESOURCES</a></li>
-                <li><a href="#">RCG PHARMA</a></li>
-                <li><a href="#">MHR CONSTRUCTION</a></li>
+                <li><a href="baygas.html">BAYGAS</a></li>
+                <li><a href="luscious.html">LUSCIOUS SPICES</a></li>
+                <li><a href="maximum.html">MAXIMUM HANDLING RESOURCES</a></li>
+                <li><a href="rcg.html">RCG PHARMACEUTICAL</a></li>
+                <li><a href="mhrcons.html">MHR CONSTRUCTION</a></li>
               </ul>
             </li>
             <li class="dropdown"><a href="#"><span>Our Legacy</span></a>
@@ -131,32 +131,37 @@
             </div>
   
             <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                <div class="row">
-                  <div class="form-group col-md-6">
-                    <label for="name">Your Name</label>
-                    <input type="text" name="name" class="form-control" placeholder="Name" id="name" required="">
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="name">Your Email</label>
-                    <input type="email" class="form-control" placeholder="Email address" name="email" id="email" required="">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="name">Subject</label>
-                  <input type="text" class="form-control" placeholder="Title of your concern" name="subject" id="subject" required="">
-                </div>
-                <div class="form-group">
-                  <label for="name">Message</label>
-                  <textarea class="form-control" placeholder="Your message to us" name="message" rows="10" required=""></textarea>
-                </div>
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-                </div>
-                <div class="text-center"><button type="submit">Send Message</button></div>
-              </form>
+                <form name="contact" method="POST" data-netlify="true">
+                    <div class="row">
+                      <div class="form-group col-md-6">
+                        <label for="name">Your Name</label>
+                        <input type="text" name="name" class="form-control" placeholder="Name" id="name" required="">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="email">Your Email</label>
+                        <input type="email" class="form-control" placeholder="Email address" name="email" id="email" required="">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="subject">Subject</label>
+                      <input type="text" class="form-control" placeholder="Title of your concern" name="subject" id="subject" required="">
+                    </div>
+                    <div class="form-group">
+                      <label for="message">Message</label>
+                      <textarea class="form-control" placeholder="Your message to us" name="message" rows="10" required=""></textarea>
+                    </div>
+                    <!-- Google reCAPTCHA -->
+                    <div class="g-recaptcha" data-sitekey="6Le4R5QpAAAAADu2k4GuIvV2mfBFo-Eis3Nx78yC"></div>
+                    <!-- End Google reCAPTCHA -->
+                    <div class="my-3">
+                      <div class="loading">Loading</div>
+                      <div class="error-message"></div>
+                      <div class="sent-message">Your message has been sent. Thank you!</div>
+                    </div>
+                    <div class="text-center"><button type="submit">Send Message</button></div>
+                  </form>
+                  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                  
             </div>
   
           </div>
@@ -204,10 +209,10 @@
             </div>
             <div class="col footer-links">
               <ul>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">LUSCIOUS SPICES</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">MAXIMUM HANDLING RESOURCE</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">RCG PHARMA</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">MHR CONSTRUCTION</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="luscious.html">LUSCIOUS SPICES</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="maximum.html">MAXIMUM HANDLING RESOURCE</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="rcg.html">RCG PHARMACEUTICAL</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="mhrcons.html">MHR CONSTRUCTION</a></li>
               </ul>
             </div>
   
