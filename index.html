@@ -689,25 +689,28 @@ MHR Property Conglomerates Inc.'s success story is a testament to the unwavering
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form name="contact-index" method="POST" data-netlify="true" class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
                   <input type="text" name="name" class="form-control" placeholder="Name" id="name" required="">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
+                  <label for="email">Your Email</label>
                   <input type="email" class="form-control" placeholder="Email address" name="email" id="email" required="">
                 </div>
               </div>
               <div class="form-group">
-                <label for="name">Subject</label>
+                <label for="subject">Subject</label>
                 <input type="text" class="form-control" placeholder="Title of your concern" name="subject" id="subject" required="">
               </div>
               <div class="form-group">
-                <label for="name">Message</label>
+                <label for="message">Message</label>
                 <textarea class="form-control" placeholder="Your message to us" name="message" rows="10" required=""></textarea>
               </div>
+              <!-- Google reCAPTCHA -->
+              <div class="g-recaptcha" data-sitekey="6Le4R5QpAAAAADu2k4GuIvV2mfBFo-Eis3Nx78yC"></div>
+              <!-- End Google reCAPTCHA -->
               <div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
@@ -715,6 +718,7 @@ MHR Property Conglomerates Inc.'s success story is a testament to the unwavering
               </div>
               <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
+            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
           </div>
 
         </div>
