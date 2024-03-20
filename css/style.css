@@ -17,6 +17,32 @@ a {
   color: #47b2e4;
   text-decoration: none;
 }
+li {
+  display: inline-block;
+  position: relative;
+  margin-right: 20px; /* Just for spacing between list items */
+}
+
+li::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px; /* Height of the underline */
+  background-color: rgb(30, 173, 240); /* Color of the underline */
+  transform-origin: bottom left;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+li:hover::after {
+  transform: scaleX(1);
+}
+
+.active-url {
+  border-bottom: 2px solid rgb(0, 132, 255);
+}
 
 a:hover {
   color: #73c5eb;
