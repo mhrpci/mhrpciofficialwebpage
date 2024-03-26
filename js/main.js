@@ -255,3 +255,58 @@
   });
 
 })()
+const searchInput = document.getElementById('searchInput');
+const searchResults = document.getElementById('searchResults');
+
+const countries = [
+  { name: 'Contact', url: 'contact.html' },
+  { name: 'About Us', url: 'about-us.html' },
+  { name: 'MHRHCI', url: 'mhrhci.html' },
+  { name: 'MHR Construction', url: 'mhrcons.html' },
+  { name: 'Verbena', url: 'verbena.html' },
+  { name: 'Our Mission', url: 'mission.html' },
+  { name: 'Our Vision', url: 'vision.html' },
+  { name: 'Maximum Handling Resources', url: 'maximum.html' },
+  { name: 'Cebic', url: 'cebic.html' },
+  { name: 'Home', url: 'index.html' },
+  { name: 'Luscious', url: 'luscious.html' },
+  { name: 'RCG Pharmaceutical', url: 'rcg.html' },
+  { name: 'Our Brand', url: 'brand.html' },
+  { name: 'BAYGAS', url: 'baygas.html' },
+  // Add more countries with their URLs
+];
+
+function displayResults(results) {
+  searchResults.innerHTML = '';
+  results.forEach(result => {
+    const li = document.createElement('li');
+    li.textContent = result.name;
+    li.dataset.url = result.url; // Store URL in dataset attribute
+    searchResults.appendChild(li);
+  });
+}
+
+function filterResults(searchTerm) {
+  const filteredResults = countries.filter(country =>
+    country.name.toLowerCase().startsWith(searchTerm.toLowerCase())
+  );
+  displayResults(filteredResults);
+}
+
+searchInput.addEventListener('input', () => {
+  const searchTerm = searchInput.value;
+  if (searchTerm.length > 0) {
+    filterResults(searchTerm);
+  } else {
+    searchResults.innerHTML = '';
+  }
+});
+
+searchResults.addEventListener('click', (event) => {
+  if (event.target.tagName === 'LI') {
+    const url = event.target.dataset.url;
+    if (url) {
+      window.location.href = url; // Redirect to the URL
+    }
+  }
+});
