@@ -278,27 +278,34 @@ const countries = [
 
 function displayResults(results) {
   searchResults.innerHTML = '';
-  results.forEach(result => {
+  if (results.length === 0) {
     const li = document.createElement('li');
-    li.textContent = result.name;
-    li.dataset.url = result.url; // Store URL in dataset attribute
+    li.textContent = 'No results found';
     searchResults.appendChild(li);
-  });
+  } else {
+    results.forEach(result => {
+      const li = document.createElement('li');
+      li.textContent = result.name;
+      li.dataset.url = result.url; // Store URL in dataset attribute
+      searchResults.appendChild(li);
+    });
+  }
 }
 
 function filterResults(searchTerm) {
   const filteredResults = countries.filter(country =>
-    country.name.toLowerCase().startsWith(searchTerm.toLowerCase())
+    country.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
   displayResults(filteredResults);
 }
 
+
 searchInput.addEventListener('input', () => {
-  const searchTerm = searchInput.value;
+  const searchTerm = searchInput.value.trim(); // Trim whitespace
   if (searchTerm.length > 0) {
     filterResults(searchTerm);
   } else {
-    searchResults.innerHTML = '';
+    displayResults([]); // Clear results when input is empty
   }
 });
 
@@ -310,3 +317,4 @@ searchResults.addEventListener('click', (event) => {
     }
   }
 });
+
