@@ -43,7 +43,60 @@ li:hover::after {
 .active-url {
   border-bottom: 2px solid rgb(0, 132, 255);
 }
-
+/* Basic styling */
+.search-container {
+  position: relative;
+  width: 200px;
+}
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #999;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Add transition for smooth animation */
+}
+#searchInput {
+  width: 100%;
+  padding: 8px 30px 8px 30px; /* Adjusted for icon width */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}
+#searchResults {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  cursor: pointer ;
+}
+#searchResults li {
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
+/* Animation and hover effect */
+.search-container:hover .search-icon {
+  opacity: 1; /* Show the icon when hovered */
+}
+.search-container:hover #searchInput {
+  width: 300px;
+}
+.search-container:hover #searchResults {
+  opacity: 1;
+  pointer-events: auto;
+}
 a:hover {
   color: #73c5eb;
   text-decoration: none;
