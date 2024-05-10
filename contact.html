@@ -71,13 +71,19 @@
               </ul>
             </li>
             <li><a href="contact.html" style="color: rgb(6, 176, 255);">CONTACT</a></li>
-            <div class="search-container">
-              <i class="fas fa-search search-icon"></i>
-              <input type="text" id="searchInput" placeholder="Search...">
-              <li id="searchResults">
-                <!-- This is where search results will appear -->
-              </li>
-            </div>
+            <form onsubmit="submitForm(); return false;" class="search-form">
+              <label for="search" class="visually-hidden">Search:</label>
+              <input type="text" id="search" name="q" placeholder="Search here..." class="search-input">&nbsp;
+              <button type="submit" class="search-button">Search</button>
+          </form>
+          
+          <script>
+            function submitForm() {
+                var query = document.getElementById("search").value;
+                // Assuming search-results.html exists in the same directory
+                window.location.href = "search-results.html?q=" + encodeURIComponent(query);
+            }
+        </script>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
