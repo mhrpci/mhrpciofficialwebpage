@@ -70,13 +70,19 @@
               </ul>
             </li>
             <li><a class="nav-link scrollto" href="contact.html">CONTACT</a></li>
-            <div class="search-container">
-              <i class="fas fa-search search-icon"></i>
-              <input type="text" id="searchInput" placeholder="Search...">
-              <li id="searchResults">
-                <!-- This is where search results will appear -->
-              </li>
-            </div>
+            <form onsubmit="submitForm(); return false;" class="search-form">
+              <label for="search" class="visually-hidden">Search:</label>
+              <input type="text" id="search" name="q" placeholder="Search here..." class="search-input">&nbsp;
+              <button type="submit" class="search-button">Search</button>
+          </form>
+          
+          <script>
+            function submitForm() {
+                var query = document.getElementById("search").value;
+                // Assuming search-results.html exists in the same directory
+                window.location.href = "search-results.html?q=" + encodeURIComponent(query);
+            }
+        </script>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
@@ -93,10 +99,9 @@
       <div class="col-lg-9 text-center text-lg-start">
         <h3><img src="images/verbena.jpg" style="width: 5em; height: 4em;"> Verbena Hotel Comforts of a Home</h3>
         <p>Verbena Hotel Comforts of a Home offers unparalleled luxury and comfort, blending modern amenities with timeless elegance for an unforgettable stay experience.</p>
-        <p>To book a room visit our booking site at&nbsp;<i class="fas fa-arrow-right arrow"></i> &nbsp;&nbsp;&nbsp;&nbsp;<a href="http://verbenahotelcebu.net" target="_blank" style="font-weight: bolder; color:antiquewhite; text-shadow: 2px 2px 3px black;">Verbena Hotel - Cebu Booking Website</a></p>
       </div>
       <div class="col-lg-3 verbena-btn-container text-center">
-        <a class="verbena-btn align-middle" href="#about">Learn More&nbsp;<i class="fas fa-arrow-down"></i></a>
+        <a class="verbena-btn align-middle" href="https://verbenahotelcebu.net" target="_blank">Book Now</a>
       </div>
       <br>
       <br>
