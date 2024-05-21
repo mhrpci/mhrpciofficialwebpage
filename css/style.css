@@ -1215,7 +1215,7 @@ section {
 # MHRHCI
 --------------------------------------------------------------*/
 .mhrhci {
-  background: linear-gradient(to bottom right, #0f059c, #1012a7, #f4f6f7);
+  background: linear-gradient(to bottom right, #382dda, #141683, #ffffff);
   background-size: cover;
   padding: 120px 0;
 }
@@ -1266,7 +1266,7 @@ section {
 --------------------------------------------------------------*/
 
 .verbena {
-  background: linear-gradient(to bottom right, #166303, #248b05, #f3ff47);
+  background: linear-gradient(to bottom right, #31861c, #1e4213, #f3ff47);
   background-size: cover;
   padding: 120px 0;
 }
